@@ -1,0 +1,16 @@
+@use "../../../app/styles/common/function";
+
+.root {
+  min-height: 80px;
+  background-color: #161622;
+  display: flex;
+  align-items: center;
+  padding-left: function.calcSize(5, 120, 360, 1920);
+}
+
+.title {
+  color: orange;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}

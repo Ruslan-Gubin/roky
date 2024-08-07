@@ -1,0 +1,12 @@
+@use "../../app/styles/common/function";
+
+.main {
+ background: linear-gradient(to left, #b9e2e28f,  #cfe3e38f, #b5d0d08f, #b9e2e28f);
+ min-height: 100dvh;
+}
+
+.content {
+  padding-top: 50px;
+  padding-inline: function.calcSize(5, 120, 360, 1920);
+
+}

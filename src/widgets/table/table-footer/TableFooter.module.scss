@@ -1,0 +1,22 @@
+@use '../../../app/styles/common/var';
+
+.tableFooterContainer {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: orange;
+  height: 55px;
+
+
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  background-color: #161622;
+}
+
+.paginationContainer {
+  display: flex;
+  column-gap: 10px;
+}
+

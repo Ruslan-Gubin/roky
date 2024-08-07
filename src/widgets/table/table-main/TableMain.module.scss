@@ -1,0 +1,139 @@
+@use "../../../app/styles/common/var";
+@use "../../../app/styles/common/function";
+
+.tableWrapper {
+overflow: scroll;
+
+&::-webkit-scrollbar {
+  transition: all 1s ease;
+  height: 10px;
+  width: 0;
+  background: rgba(128, 128, 128, 0);
+  border-radius: 8px;
+}
+&::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+&:hover {
+  &::-webkit-scrollbar-thumb {
+    background-color: #c4c4c4;
+    border-radius: 10px;
+  }
+}
+}
+
+.root {
+  box-shadow: 6px 5px 8px 1px rgba(0, 0, 0, 0.159);
+}
+
+
+.tableBodyList {
+  background-color: rgba(255, 255, 255, 0.939);
+  min-height: calc(100dvh - 315px);
+  @media (max-width: 1600px) {
+    min-height: calc(100dvh - 335px);
+  }
+  @media (max-width: 1200px) {
+    min-height: calc(100dvh - 325px);
+  }
+  @media (max-width: 768px) {
+    min-height: calc(100dvh - 315px);
+  }
+  @media (max-width: 500px) {
+    min-height: calc(100dvh - 305px);
+  }
+}
+
+.userItem {
+   border: 1px solid rgba(0, 0, 0, 0.058);
+  display: grid;
+  transition: box-shadow 0.1s ease;
+  gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid #0000001e;
+  border-bottom: 1px solid #5665d217;
+  min-height: 61.2px;
+  grid-template-columns: 100px 180px 150px 220px 150px 150px 90px 110px 1fr;
+
+  @media (max-width: 1600px) {
+    min-height: 61.4px;
+  }
+  @media (max-width: 1200px) {
+    min-height: 62.5px;
+  }
+  @media (max-width: 768px) {
+    min-height: 63.5px;
+  }
+  @media (max-width: 500px) {
+    min-height: 64.5px;
+  }
+
+  &:hover {
+    background-color: rgba(21, 87, 154, 0.03);
+  }
+}
+
+.userInfo {
+  padding: 0 16px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: function.calcSize(12, 14, 360, 1920);
+}
+
+.textCenter {
+  text-align: center;
+}
+
+
+
+.tableBodyItemImageContainer {
+  padding: 0 16px;
+}
+
+.imgWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.tableBodyItemImage {
+  min-width: function.calcSize(40, 50, 360, 1920);
+  min-height: function.calcSize(40, 50, 360, 1920);
+  max-width: function.calcSize(40, 50, 360, 1920);
+  max-height: function.calcSize(40, 50, 360, 1920);
+  border-radius: 50%;
+}
+
+
+.tableBodyItemCellTextEmpty {
+  padding-left: 25px;
+}
+
+.emptySearch {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  margin-top: 20px;
+}
+
+.emptyClearSearch {
+  font-weight: 600;
+  color: #5664d2;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.tableBodyItemCellTextUnderline {
+  text-decoration: line-through;
+  text-decoration-color: rgba(255, 0, 0, 0.448);
+  text-decoration-thickness: 2px;
+}
+
